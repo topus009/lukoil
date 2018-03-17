@@ -6,7 +6,6 @@ function request(url) {
     xhr.onload = function () {
       if (this.status === 200) {
         resolve(JSON.parse(this.response));
-        // resolve(JSON.parse(this.response));
       } else {
         const error = new Error(this.statusText);
         error.code = this.status;

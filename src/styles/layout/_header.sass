@@ -5,6 +5,13 @@
   .logo
     margin: 6px 0 15px 31px
     display: inline-block
+    // display: table-cell
+    // width: auto
+    vertical-align: middle
+    // height: 80px
+    img
+      height: 60px
+      margin-left: 15px
   .number
     font-family: 'D-R'
     text-align: center
@@ -67,34 +74,6 @@
     .link_wrapper
       display: none
 
-@media screen and (max-width: 480px)
-  .header
-    .logo
-      display: table-cell
-      width: auto
-      vertical-align: middle
-      height: 80px
-      img
-        height: 30px
-        margin-left: 15px
-    .number
-      margin-right: 70px
-      .digits
-        padding: 0 10px
-        line-height: 25px
-        font-size: 18px
-      .number_text
-        font-size: 12px
-    .links
-      .link_wrapper
-        .link
-          font-size: 18px
-          padding: 0 25px
-      &:hover
-        padding: 10px 0
-        &:after
-          width: 60px
-
 @media screen and (min-width: 1366px)
   .header
     display: flex
@@ -102,8 +81,6 @@
     align-items: center
     .logo
       margin: auto 5px auto 20px
-      img
-        width: 99px
     .number
       position: static
       order: 3
@@ -137,6 +114,39 @@
         width: auto
         background-color: color(bg_, header_)
 
+@media screen and (max-width: 640px)
+  .header
+    .logo
+      margin-left: 15px
+      img
+        margin-left: 0
+
+@media screen and (max-width: 480px)
+  .header
+    .logo
+      height: 80px
+      display: table-cell
+      img
+        height: 40px
+        margin-left: 10px
+    .number
+      margin-right: 70px
+      .digits
+        padding: 0 10px
+        line-height: 25px
+        font-size: 18px
+      .number_text
+        font-size: 12px
+    .links
+      .link_wrapper
+        .link
+          font-size: 18px
+          padding: 0 25px
+      &:hover
+        padding: 10px 0
+        &:after
+          width: 60px
+
 @media screen and (max-width: 320px)
   .header
     .logo
@@ -147,3 +157,5 @@
       img
         height: 30px
         margin-left: 15px
+    .number
+      display: none

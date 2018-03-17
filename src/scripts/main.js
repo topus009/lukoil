@@ -1,7 +1,7 @@
 /* eslint-disabl */
 import map_js from './ymaps';
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   // ========================== GLOBAL SCROLL
   (function () {
     const links = document.querySelectorAll('.header .link');
@@ -19,29 +19,29 @@ document.addEventListener('DOMContentLoaded', function () {
   }());
   // ========================= VIDEO PLAY
   (function () {
-    // let play_btn = document.querySelectorAll('.benefits_video_play')[0];
-    // let video_title = document.querySelectorAll('.benefits_video_title')[0];
-    // let poster = document.querySelectorAll('.poster')[0];
-    // let video = document.getElementsByTagName('video')[0];
+    const play_btn = document.querySelectorAll('.benefits_video_play')[0];
+    const video_title = document.querySelectorAll('.benefits_video_title')[0];
+    const poster = document.querySelectorAll('.poster')[0];
+    const video = document.getElementsByTagName('video')[0];
 
-    // play_btn.addEventListener('click', function () {
-    //   play_btn.classList.add('none');
-    //   video_title.classList.add('none');
-    //   video.setAttribute('controls', 'true');
-    //   video.setAttribute('autoplay', 'true');
-    //   video.classList.remove('none');
-    //   video.play();
-    //   poster.style.backgroundImage = 'none';
-    //   poster.style.zindex = '-1';
-    // });
-    // // ============ ПАУЗА
-    // video.addEventListener('click', function (e) {
-    //   if (!e.target.paused) {
-    //     video.pause();
-    //   } else {
-    //     video.play();
-    //   }
-    // });
+    play_btn.addEventListener('click', () => {
+      play_btn.classList.add('none');
+      video_title.classList.add('none');
+      video.setAttribute('controls', 'true');
+      video.setAttribute('autoplay', 'true');
+      video.classList.remove('none');
+      video.play();
+      poster.style.backgroundImage = 'none';
+      poster.style.zindex = '-1';
+    });
+    // ============ ПАУЗА
+    video.addEventListener('click', (e) => {
+      if (!e.target.paused) {
+        video.pause();
+      } else {
+        video.play();
+      }
+    });
     // ===============
   }());
 });
