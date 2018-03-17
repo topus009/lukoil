@@ -1,0 +1,14 @@
+=font-face($name, $src)
+  @font-face
+    font-family: $name
+    font-style: normal
+    src: url('./../fonts/eot/' + $src + '.eot?') format('eot'),
+    url('./../fonts/woff/' + $src + '.woff') format('woff'),
+    url('./../fonts/ttf/' + $src + '.ttf') format('truetype'),
+    url('./../fonts/otf/' + $src + '.otf') format('opentype')
+
++font-face('D-Bl','DINPro-Black')
++font-face('D-Bo','DINPro-Bold')
++font-face('D-L','DINPro-Light')
++font-face('D-M','DINPro-Medium')
++font-face('D-R','DINPro-Regular')

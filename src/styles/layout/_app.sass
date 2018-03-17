@@ -1,0 +1,189 @@
+.app
+  width: 100vw
+  display: flex
+  flex-direction: column
+  .left
+    align-items: flex-end
+    z-index: 998
+    background-color: color(bg_, white_dark_)
+    .app_title
+      color: color(text_, blue_)
+      font-family: 'D-Bo'
+      font-size: 40px
+      font-weight: 700
+      text-transform: uppercase
+      margin: 51px 17px 50px 27px
+    .app_items
+      margin: 54px 27px 66px 27px
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      align-items: flex-start
+      flex-wrap: wrap
+      .item
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 250px
+        margin: 10px 10px 10px 0
+        text-align: center
+        word-wrap: break-word
+        img
+          width: 121px
+          height: 120px
+        p
+          color: color(text_, black_)
+          font-family: 'D-R'
+          font-size: 32px
+          font-weight: 400
+          line-height: 32px
+  .right
+    background-image: url('../../images/app_bg.jpg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    display: flex
+    .download
+      margin: 50px
+      .right_phones
+        img
+          margin: 0 auto
+          display: table-cell
+      .right_content
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        .right_title
+          font-family: 'D-R'
+          font-size: 32px
+          font-weight: 400
+          line-height: 32px
+          text-align: center
+          margin-bottom: 22px
+        span
+          width: 100%
+          display: flex
+          justify-content: space-between
+          img
+            width: 47%
+            height: 47%
+// КНОПКА ЗАКАЗАТЬ
++btn_orange()
+
+@media screen and (max-width: 480px)
+  .app
+    .left
+      .app_title
+        font-size: 40px
+      .app_items
+        flex-direction: column
+        align-items: center
+    .right
+      background-position: center
+      background-size: cover
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      .download
+        margin: 27px
+        .right_phones
+          img
+            width: 100%
+        .right_content
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          .right_title
+            font-size: 26px
+            line-height: 26px
+            margin-bottom: 18px
+          span
+            flex-direction: column
+            align-items: center
+            img
+              width: 90%
+              height: 90%
+              margin: 5px 0
+
+@media screen and (min-width: 641px)
+  .app
+    .left
+      .app_items
+        .item
+          margin: 0 30px
+          width: auto
+          img
+            width: 121px
+            height: 121px
+          p
+            font-size: 20px
+            line-height: 20px
+            width: 200px
+
+@media screen and (min-width: 980px)
+  .app
+    flex-direction: column-reverse
+    .left
+      width: 100%
+      .app_title
+        font-size: 42px
+        line-height: 1.5em
+        margin: 35px 19px 35px 19px
+      .app_items
+        justify-content: flex-start
+        .item
+          margin: 0 15px
+    .right
+      width: 100%
+
+@media screen and (max-width: 320px)
+  .app
+    .left
+      .app_title
+        font-size: 32px
+        margin: 21px 17px 25px 27px
+      .app_items
+        margin: 27px 27px 33px 27px
+
+@media screen and (min-width: 1366px)
+  .app
+    flex-direction: row-reverse
+    justify-content: flex-end
+    .left
+      width: 50%
+      .app_title
+        font-size: 46px
+        line-height: 46px
+        margin: 35px 60px
+      .app_items
+        margin: 5px 60px
+        .item
+          margin-right: 25px
+          margin: 10px 10px 10px 0
+          img
+            width: 100px
+            height: 100px
+          p
+            margin-top: 16px
+            margin-bottom: 0
+            font-size: 20px
+      .btn
+        margin-top: 66px
+        margin-left: 60px
+    .right
+      width: 50%
+
+@media screen and (min-width: 1600px)
+  .app
+    .left
+      .app_title
+        margin: 35px 120px
+      .app_items
+        margin: 5px 120px
+      .btn
+        margin-left: 120px

@@ -1,0 +1,107 @@
+.map
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 100vw
+  .map_header_wrapper
+    margin: 25px 10px
+    .map_title
+      color: color(text_, blue_)
+      font-family: 'D-Bo'
+      font-size: 30px
+      text-transform: uppercase
+      margin: 32px 5% 15px 5%
+    .map_select_box
+      margin: 0 21px
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      align-items: center
+      +select
+  #map_box
+    background-color: orange
+    width: 100%
+    height: 700px
+    & [class$='-ground-pane']
+      filter: grayscale(100%)
+
+@media screen and (min-width: 1366px)
+  .map
+    .map_header_wrapper
+      .map_select_box
+        flex-direction: row
+    #map_box
+      height: 617px
+
+@media screen and (min-width: 980px)
+  .map
+    .map_header_wrapper
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      align-items: center
+      .map_title
+        font-size: 46px
+        padding: 10px
+        margin: 0
+        margin-left: 5%
+        line-height: 1.5em
+      .map_select_box
+        flex-direction: column
+        justify-content: center
+        .select
+          margin: 11px
+          padding: 0 23px
+          max-width: 360px
+          font-size: 20px
+
+@media screen and (max-width: 700px)
+  .map
+    .map_header_wrapper
+      .map_select_box
+        flex-direction: column
+        .select
+          font-size: 32px
+
+@media screen and (max-width: 480px)
+  .map
+    .map_header_wrapper
+      .map_title
+        font-size: 25px
+        padding: 10px
+        margin: 25px 2% 15px 2%
+      .map_select_box
+        padding: 0 10px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        .select
+          font-size: 20px
+          height: 40px
+          line-height: 40px
+          margin: 5px
+          background-size: 11px
+          max-width: 578px
+    #map_box
+      height: 350px
+
+@media screen and (max-width: 320px)
+  .map
+    .map_title
+      font-size: 25px
+      padding: 10px
+      margin: 25px 0 15px 2%
+    .map_select_box
+      padding: 0 10px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      .select
+        font-size: 20px
+        height: 40px
+        line-height: 40px
+        margin: 5px auto
+        background-size: 11px
+    #map_box
+      height: 350px

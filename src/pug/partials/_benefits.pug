@@ -1,0 +1,33 @@
+-
+    items=[
+      {
+        text: 'Качественная сеть партнерских автомоек',
+        img: '../../images/svg/car_washing.svg',
+      },
+      {
+        text: 'Безналичный расчёт',
+        img: '../../images/svg/cards.svg',
+      },
+      {
+        text: 'Упрощенная схема документооборота',
+        img: '../../images/svg/doc.svg',
+      },
+      {
+        text: 'Расширенный сервис',
+        img: '../../images/svg/service.svg',
+      }
+    ]
+
+.benefits
+  .benefits_content
+    .benefits_title Преимущества услуги автомойки по топливной карте «Газпром нефть»
+    .benefits_items
+      each i in items
+        +item_(i.text, i.img)
+  .benefits_video
+    .poster
+    .benefits_video_title Как работает наша сеть современных автомоек
+    video(class='none' preload)
+      source(src='/video/GPN_moyki_3_1.mp4' type='video/mp4')
+      source(src='/video/GPN_moyki_3_1.webm' type='video/webm')
+    img(class='benefits_video_play' src='/images/svg/play.svg')

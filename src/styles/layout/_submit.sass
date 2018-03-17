@@ -1,0 +1,108 @@
+.submit
+  display: flex
+  flex-direction: column
+  .left
+    align-items: flex-end
+    z-index: 998
+    background-color: color(bg_, white_)
+    .submit_title
+      color: color(text_, blue_)
+      font-family: 'D-Bo'
+      font-size: 40px
+      font-weight: 700
+      text-transform: uppercase
+      margin: 55px 17px 44px 30px
+    .submit_list
+      ol
+        counter-reset: item
+        margin: 0 44px 0 108px
+        padding: 0
+        color: color(text_, black_)
+        +o_item()
+        li
+          margin-left: 0
+          .main
+            font-family: 'D-Bo'
+            font-size: 32px
+            font-weight: 700
+            line-height: 32px
+          .article
+            font-family: 'D-L'
+            font-size: 24px
+            font-weight: 400
+            margin-top: 23px
+  .right
+    height: auto
+    display: table
+    img
+      width: 100vw
+      display: table-cell
+
+@media screen and (max-width: 480px)
+  .submit
+    .left
+      .submit_title
+        font-size: 32px
+        margin: 21px 17px 25px 27px
+      .submit_list
+        ol
+          margin: 0 17px 0 90px
+          li
+            .main
+              font-size: 25px
+              line-height: 25px
+            .article
+              font-size: 20px
+            &::before
+              font-size: 24px
+              line-height: 50px
+              width: 50px
+              height: 50px
+              left: -67px
+            &::after
+              left: -40px
+
+@media screen and (min-width: 641px)
+  .submit
+    .left
+      .submit_title
+        font-size: 42px
+        margin: 44px 20px 32px 20px
+        line-height: 1.4em
+      .submit_list
+        ol
+          margin: 0 17px 0 90px
+          li
+            margin-bottom: 40px
+            .main
+              font-size: 22px
+              line-height: 28px
+            .article
+              font-size: 18px
+              margin-top: 15px
+              line-height: 1.3em
+            &::before
+              font-size: 24px
+              left: -73px
+            &::after
+              left: -43px
+
+@media screen and (min-width: 980px)
+  .submit
+    .left
+      .submit_list
+        ol
+          li
+            .article
+              margin-top: 8px
+
+@media screen and (min-width: 1366px)
+  .submit
+    flex-direction: row
+    overflow-x: hidden
+    .left
+      min-width: 42%
+    .right
+      img
+        width: auto
+        margin-left: calc(-60vw + 50%)

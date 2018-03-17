@@ -1,0 +1,131 @@
+.services
+  width: 100vw
+  display: flex
+  flex-direction: column
+  .services_content
+    .services_title
+      color: color(text_, blue_)
+      font-family: 'D-Bo'
+      font-size: 40px
+      font-weight: 700
+      text-transform: uppercase
+      margin: 53px 17px 50px 27px
+    .services_article
+      font-size: 32px
+      font-weight: 700
+      line-height: 32px
+      font-family: 'D-Bo'
+      color: color(text_, black_)
+      margin: 0 17px 0 27px
+    .services_items
+      margin: 54px 27px 66px 27px
+      display: flex
+      flex-direction: row
+      justify-content: start
+      align-items: flex-start
+      flex-wrap: wrap
+      .item
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 250px
+        margin: 10px 10px 10px 0
+        text-align: center
+        word-wrap: break-word
+        img
+          width: 121px
+          height: 120px
+        p
+          color: color(text_, black_)
+          font-family: 'D-R'
+          font-size: 32px
+          font-weight: 400
+          line-height: 32px
+  .services_images
+    flex-shrink: 0
+    display: flex
+    flex-direction: column
+    img
+      width: 100%
+
+@media screen and (min-width: 980px)
+  .services
+    .services_content
+      .services_title
+        font-size: 42px
+        line-height: 1.5em
+        margin: 35px 19px 35px 19px
+      .services_article
+        font-size: 22px
+        line-height: 22px
+    .services_images
+      flex-direction: row
+      img
+        width: 50%
+        height: 50%
+
+@media screen and (min-width: 641px)
+  .services
+    .services_content
+      .services_items
+        align-items: start
+        .item
+          margin-right: 120px
+          width: 133px
+          img
+            width: 100px
+            height: 100px
+          p
+            font-size: 22px
+            line-height: 22px
+            width: 135px
+
+@media screen and (max-width: 480px)
+  .services
+    .services_content
+      .services_title
+        font-size: 40px
+      .services_items
+        flex-direction: column
+
+@media screen and (max-width: 320px)
+  .services
+    .services_content
+      .services_title
+        font-size: 32px
+        margin: 21px 17px 25px 27px
+      .services_article
+        line-height: 25px
+        font-size: 25px
+      .services_items
+        margin: 27px 27px 33px 27px
+
+@media screen and (min-width: 1366px)
+  .services
+    flex-direction: row
+    justify-content: flex-end
+    .services_content
+      max-width: 50%
+      .services_title
+        font-size: 46px
+        line-height: 46px
+      .services_article
+        font-size: 20px
+        line-height: 20px
+      .services_items
+        margin: 5px 27px 5px 27px
+        .item
+          margin-right: 60px
+          img
+            width: 100px
+            height: 100px
+          p
+            margin-top: 11px
+            margin-bottom: 0
+    .services_images
+      flex-direction: column
+      flex-shrink: 4
+      img
+        width: 100%
+        height: auto

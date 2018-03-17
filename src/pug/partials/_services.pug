@@ -1,0 +1,34 @@
+-
+    items=[
+      {
+        text: 'Сопутствующие товары',
+        img: '../../images/svg/kruassan.svg',
+      },
+      {
+        text: 'Электронный документооборот',
+        img: '../../images/svg/coursor.svg',
+      },
+      {
+        text: 'Шиномонтажные мастерские',
+        img: '../../images/svg/shina.svg',
+      },
+      {
+        text: 'Автомойки',
+        img: '../../images/svg/car_washing.svg',
+      },
+      {
+        text: 'Электронная отчетность',
+        img: '../../images/svg/otchet.svg',
+      }
+    ]
+
+.services
+  .services_content
+    .services_title Все необходимые в пути услуги и сервисы
+    .services_article Получите возможность оплачивать услуги по топливной карте «Газпром нефть». Вся отчетность по расходам будет отображаться в личном кабинете.
+    .services_items
+      each i in items
+        +item_(i.text, i.img)
+  .services_images
+    img(class='services_bg_01' src='../../images/services_bg_01.jpg')
+    img(class='services_bg_02' src='../../images/services_bg_02.jpg')

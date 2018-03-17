@@ -1,0 +1,132 @@
+.connect
+  display: flex
+  flex-direction: column
+  .left
+    align-items: flex-end
+    z-index: 998
+    background-color: color(bg_, white_dark_)
+    .connect_title
+      color: color(text_, blue_)
+      font-family: 'D-Bo'
+      font-size: 40px
+      font-weight: 700
+      text-transform: uppercase
+      margin: 55px 17px 44px 30px
+    .connect_list
+      ol
+        counter-reset: item
+        margin: 0 44px 0 108px
+        padding: 0
+        color: color(text_, black_)
+        +o_item()
+        .ol_title
+          color: color(text_, blue_)
+          font-family: 'D-Bo'
+          font-size: 24px
+          font-weight: 700
+          line-height: 24px
+          margin-bottom: 15px
+        li
+          margin-left: 0
+          .main
+            font-family: 'D-Bo'
+            font-size: 32px
+            font-weight: 700
+            line-height: 32px
+          .article
+            font-family: 'D-L'
+            font-size: 24px
+            font-weight: 400
+            margin-top: 23px
+  .right
+    display: none
+    min-width: 42%
+    width: 50%
+    background-image: url('../../images/notebook.png'), url('../../images/connect_bg.jpg')
+    background-repeat: no-repeat
+    background-position: center 20%, center
+    background-size: 80%, cover
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
+// КНОПКА ЗАКАЗАТЬ
++btn_orange()
+
+@media screen and (max-width: 480px)
+  .connect
+    .left
+      .connect_title
+        font-size: 32px
+        margin: 21px 17px 25px 27px
+      .connect_list
+        ol
+          margin: 0 17px 0 90px
+          li
+            .main
+              font-size: 25px
+              line-height: 25px
+            .article
+              font-size: 20px
+            &::before
+              font-size: 24px
+              line-height: 50px
+              width: 50px
+              height: 50px
+              left: -67px
+            &::after
+              left: -40px
+    .right
+      display: none
+
+@media screen and (min-width: 641px)
+  .connect
+    .left
+      .connect_title
+        font-size: 42px
+        margin: 44px 20px 32px 20px
+        line-height: 1.4em
+      .connect_list
+        ol
+          margin: 0 17px 0 90px
+          li
+            margin-bottom: 40px
+            .main
+              font-size: 22px
+              line-height: 28px
+            .article
+              font-size: 18px
+              margin-top: 15px
+              line-height: 1.3em
+            &::before
+              font-size: 24px
+              left: -73px
+            &::after
+              left: -43px
+    .right
+      display: none
+
+@media screen and (min-width: 980px)
+  .connect
+    .left
+      .connect_list
+        ol
+          li
+            .article
+              margin-top: 8px
+    .right
+      display: none
+
+@media screen and (min-width: 1366px)
+  .connect
+    flex-direction: row-reverse
+    overflow-x: hidden
+    .left
+      min-width: 42%
+      .btn
+        display: none
+    .right
+      display: flex
+      position: relative
+      .btn
+        display: inline-table
+        margin-bottom: 90px

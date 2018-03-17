@@ -1,0 +1,32 @@
+mixin link_(text, class_)
+  .link_wrapper
+    span(class='link' data-title= class_)= text
+
+mixin dropdown_icon_(class_)
+  svg(class='dropdown_icon ' + class_
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'
+    width='0.306in' 
+    height='0.153in')
+    path(
+      fill-rule='evenodd'
+      fill='rgb(10, 94, 167)'
+      d='M0.021,0.300 L11.000,10.699 L21.135,0.300 L0.021,0.300 Z')
+
+mixin btn_(text, class_)
+  div(class='btn ' + class_)= text
+
+mixin select_city_(class_, options_)
+  select(class= 'select ' + class_)
+    each opt in options_
+      option(value= opt)= opt
+
+mixin select_car_(class_, options_)
+  select(class= 'select ' + class_)
+    each opt in options_
+      option(value= opt[1])= opt[0]
+
+mixin item_(text_, img_)
+  .item
+    img(src= img_)
+    p= text_

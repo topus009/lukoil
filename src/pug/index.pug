@@ -1,0 +1,16 @@
+extends _layout.pug
+include mixins/mixins.pug
+
+block title
+  title Главная
+block content
+  img(id= 'scroll_down' class= 'scroll_down' src='images/svg/scroll_down.svg' alt='')
+  include partials/_header.pug
+  include partials/_slider.pug
+  include partials/_benefits.pug
+  include partials/_connect.pug
+  include partials/_map.pug
+  include partials/_services.pug
+  include partials/_app.pug
+  include partials/_submit.pug
+  include partials/_footer.pug

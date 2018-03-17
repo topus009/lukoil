@@ -1,0 +1,44 @@
+// sass-lint:disable no-color-keywords, no-color-literals
+
+$palette: (
+  bg_: (
+    header_: #B80008,
+    blue_: #E8000A,
+    white_: #fff,
+    white_dark_: #EDEEF3,
+    azure_: #E8000A,
+    video_: #B80008,
+  ),
+  text_: (
+    white_: #fff,
+    white_dark_: #ccd4e0,
+    blue_: #B80008,
+    black_: #000,
+    grey_: #565656,
+  ),
+  border_: (
+    azure_: #E8000A,
+    link_: #E8000A,
+    input_: #B80008,
+    number_: rgba(255, 255, 255, 0.3),
+  ),
+  btn_: (
+    white_: #fff,
+    orange_: #e59043,
+  ),
+  ets_: (
+    arrow_down_select_: #E8000A,
+  ),
+);
+
+@function color($key, $tone: 'base') {
+  @if map-has-key($palette, $key) {
+    @if map-has-key(map-get($palette, $key), $tone) {
+      @return map-get(map-get($palette, $key), $tone);
+    } @else {
+      @error 'Oops, `#{$tone}` is not available in `#{map-get($palette, $key)}`';
+    }
+  } @else {
+    @error 'Ouch, `#{$key}` is not available in $palette';
+  }
+}

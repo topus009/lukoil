@@ -1,0 +1,75 @@
+.footer
+  background-color: color(bg_, header_)
+  font-family: 'D-Bo'
+  color: color(text_, white_)
+  font-size: 32px
+  font-weight: 700
+  height: 292px
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  .footer_title
+    text-transform: uppercase
+    width: 100%
+    text-align: center
+    line-height: 1.2em
+  .footer_phone
+    text-align: center
+    line-height: 1
+    .phone_text
+      font-size: 24px
+      font-weight: 400
+      color: color(text_, white_dark_)
+      font-family: 'D-R'
+      margin-bottom: 11px
+    .number
+      font-size: 40px
+
+@media screen and (max-width: 480px)
+  .footer
+    padding: 10px
+    font-size: 30px
+    .footer_phone
+      .phone_text
+        font-size: 22px
+      .number
+        font-size: 35px
+
+@media screen and (max-width: 320px)
+  .footer
+    font-size: 25px
+    .footer_phone
+      .phone_text
+        font-size: 20px
+      .number
+        font-size: 30px
+
+@media screen and (min-width: 980px)
+  .footer
+    height: 111px
+    font-size: 20px
+    flex-direction: row
+    .footer_title
+      width: 290px
+    .footer_phone
+      flex-direction: row
+      display: flex
+      align-items: center
+      .phone_text
+        font-size: 18px
+        margin-bottom: 0
+        margin-right: 17px
+      .number
+        font-size: 30px
+
+@media screen and (min-width: 641px)
+  .footer
+    padding: 0 17px
+
+@media screen and (min-width: 1366px)
+  .footer
+    height: 82px
+    .footer_title
+      width: auto
+

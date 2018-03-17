@@ -1,0 +1,36 @@
+-
+    items=[
+      {
+        text: 'Просмотр баланса карты',
+        img: '../../images/svg/ruble.svg',
+      },
+      {
+        text: 'Просмотр лимитов и транзакций',
+        img: '../../images/svg/cash.svg',
+      },
+      {
+        text: 'Поиск ближайших АЗС и сервисов',
+        img: '../../images/svg/fuel.svg',
+      },
+      {
+        text: 'Полезная информация',
+        img: '../../images/svg/info.svg',
+      }
+    ]
+
+.app
+  .left
+    .app_title помощник водителю в пути
+    .app_items
+      each i in items
+        +item_(i.text, i.img)
+    +btn_('заключить договор онлайн', '')
+  .right
+    .download
+      .right_phones
+        img(class='app_phones' src='../../images/phones.png')
+      .right_content
+        .right_title Скачайте мобильное приложение «ГПНКард»
+        span
+          img(class='app_01' src='../../images/apple.png')
+          img(class='app_02' src='../../images/google.png')

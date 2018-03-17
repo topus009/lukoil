@@ -1,0 +1,156 @@
+.slider
+  width: 100vw
+  background-image: url('../../images/slide_01_bg.png')
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  background-color: color(bg_, blue_)
+  padding: 34px 0 61px 0
+  .slider_head
+    margin: 0 31px
+    display: table
+    margin-bottom: 36px
+    .slider_head_image_wrapper
+      width: 125px
+      height: 125px
+      background-color: color(bg_, white_)
+      border-radius: 100%
+      position: relative
+      display: table
+      margin-right: 26px
+      img
+        position: absolute
+        left: 10px
+        top: 10px
+    .slider_head_title
+      color: color(text_, white_)
+      font-family: 'D-Bo'
+      font-size: 46px
+      font-weight: 700
+      line-height: 50px
+      text-transform: uppercase
+      display: table-cell
+      color: color(text_, white_)
+  .slider_content
+    margin: 0 31px
+    .slider_content_text
+    font-family: 'D-R'
+    font-size: 38px
+    font-weight: 500
+    line-height: 38px
+    color: color(text_, white_)
+    .slider_content_image
+      width: 100%
+    .btn
+      margin: 20px auto 0 auto
+  .slider_toggle_btns
+    width: 135px
+    .slider_btn
+      display: none
+      &.left,
+      &.right
+        img
+          width: 60px
+          height: 60px
+          cursor: pointer
+      &.right
+        transform: rotate(180deg)
+
+@media screen and (max-width: 480px)
+  .slider
+    .slider_head
+      margin: 0 15px
+      display: flex
+      flex-direction: column
+      align-items: center
+      text-align: center
+      .slider_head_image_wrapper
+        margin-bottom: 26px
+      .slider_head_title
+        font-size: 32px
+        line-height: 36px
+    .slider_content
+      margin: 0 15px
+      .slider_content_text
+        font-size: 24px
+        font-weight: 500
+        line-height: 26px
+        margin-top: 20px
+
+@media screen and (min-width: 481px) and (max-width: 640px)
+  .slider
+    .slider_head
+      .slider_head_title
+          font-size: 36px
+          line-height: 40px
+    .slider_content
+      .slider_content_text
+        font-size: 32px
+        font-weight: 500
+        line-height: 32px
+
+@media screen and (min-width: 641px)
+  .slider
+    .slider_head
+    .slider_content
+      .btn
+        padding: 27px 64px
+
+@media screen and (min-width: 980px)
+  .slider
+    .slider_head
+      .slider_head_title
+        font-size: 52px
+        line-height: 56px
+    .slider_content
+      display: flex
+      flex-direction: column
+      width: 319px
+      margin-left: 31px
+      .slider_content_text
+        font-size: 30px
+        line-height: 30px
+      .slider_content_image
+        width: 629px
+        position: absolute
+        top: -200px
+        bottom: 0
+        right: 0
+        margin: auto
+      .btn
+        font-size: 17px
+        line-height: 17px
+        padding: 23px 20px
+
+@media screen and (min-width: 1366px)
+  .slider
+    padding: 70px 0 61px 0
+    min-height: 720px
+    .slider_head
+      margin: 0 170px
+      .slider_head_title
+        font-size: 70px
+        line-height: 80px
+    .slider_content
+      margin: 0 170px
+      margin-top: 86px
+      width: auto
+      height: 276px
+      .slider_content_text
+        width: 317px
+        margin-bottom: 64px
+      .slider_content_image
+        width: 1201px
+        position: absolute
+        left: 487px
+        top: 215px
+      .btn
+        margin-left: 0
+        margin-right: 0
+    .slider_toggle_btns
+      margin: 0 170px
+      margin-top: 64px
+      .slider_btn
+        display: inline-block
+        &.right
+          margin-left: 10px

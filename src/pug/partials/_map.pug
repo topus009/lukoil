@@ -1,0 +1,10 @@
+- var city_ = ['Москва','Санкт-Петербург','МО']
+- var car_ = [['Грузовые','cargo'],['Легковые','car']]
+
+.map
+  .map_header_wrapper
+    .map_title География автомоек, доступных по топливной карте Газпром нефть»
+    .map_select_box
+      +select_car_('select_car',car_)
+      +select_city_('select_city',city_)
+  #map_box
