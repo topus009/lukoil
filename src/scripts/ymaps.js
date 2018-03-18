@@ -12,7 +12,7 @@ const map_js = () => {
   const script = document.createElement('script');
   script.src = `https://api-maps.yandex.ru/${ver}/?lang=${language}&coordorder=${coordorder}&mode=${mode}`;
   const children = document.body.children;
-  children[children.length - 1].appendChild(script);
+  children[0].appendChild(script);
   let myMap; /* eslint no-unused-vars: 1 */
   // ===================================
   let data;

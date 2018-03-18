@@ -86,7 +86,7 @@ var map_js = function map_js() {
   var script = document.createElement('script');
   script.src = 'https://api-maps.yandex.ru/' + ver + '/?lang=' + language + '&coordorder=' + coordorder + '&mode=' + mode;
   var children = document.body.children;
-  children[children.length - 1].appendChild(script);
+  children[0].appendChild(script);
   var myMap = void 0; /* eslint no-unused-vars: 1 */
   // ===================================
   var data = void 0;
