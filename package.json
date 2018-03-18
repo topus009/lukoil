@@ -1,11 +1,11 @@
 {
-  "name": "gulp-starter",
+  "name": "lukoil",
   "version": "0.2.0",
-  "description": "Suprastin",
+  "description": "Lukoil example landing",
   "main": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/topus009/traffic.git"
+    "url": "https://github.com/topus009/lukoil.git"
   },
   "scripts": {
     "build": "gulp build:dist",

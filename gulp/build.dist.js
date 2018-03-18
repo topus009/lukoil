@@ -25,9 +25,9 @@ gulp.task('copyGeneralFiles', ['clean:dist'], () => (
 
 gulp.task('optimizeImages', ['clean:dist'], () => (
   gulp.src([
-    '!./src/images/**/*',
+    './src/images/**/*',
     './src/images/icons',
-    '!./src/images/icons/**/*',
+    './src/images/icons/**/*',
     // =========================================
   ])
     .pipe(imagemin({
