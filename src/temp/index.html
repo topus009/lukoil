@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1">
+    <title>Главная</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" defer>
+  </head>
+  <body><img class="scroll_down" id="scroll_down" src="images/svg/scroll_down.svg" alt="">
+    <div class="header"><span class="logo"><img src="images/logo.png" alt="logo"></span><span class="number"> 
+        <div class="digits">8-000-000-00-00</div>
+        <div class="number_text">Звонок по России бесплатный</div></span>
+      <div class="links">
+        <div class="link_wrapper"><span class="link" data-title="benefits">преимущества автомоек</span></div>
+        <div class="link_wrapper"><span class="link" data-title="connect">как подключить</span></div>
+        <div class="link_wrapper"><span class="link" data-title="map">сеть автомоек</span></div>
+        <div class="link_wrapper"><span class="link" data-title="services">услуги</span></div>
+        <div class="link_wrapper"><span class="link" data-title="app">приложение</span></div>
+        <div class="link_wrapper"><span class="link" data-title="submit">оформить карту</span></div>
+      </div>
+    </div>
+    <div class="slider"><img class="slider_bg_image" src="images/slide_01_bg.png">
+      <div class="slider_head">
+        <div class="slider_head_image_wrapper"><img src="images/car_wash.png"></div>
+        <div class="slider_head_title">получите доступ к сети современных автомоек</div>
+      </div><img class="slider_content_image" src="images/slide_01_image.png">
+      <div class="slider_content">
+        <div class="slider_content_text">для транспортных средств до 4 т с онлайн топливной картой «Лукойл»</div>
+        <div class="btn ">заключить договор онлайн</div>
+      </div>
+    </div>
+    <div class="benefits">
+      <div class="benefits_content">
+        <div class="benefits_title">преимущества услуги автомойки по топливной карте «лукойл»</div>
+        <div class="benefits_items">
+          <div class="item"><img src="images/svg/car_washing.svg"/>
+            <p>Широкая сеть партнерских автомоек</p>
+          </div>
+          <div class="item"><img src="images/svg/cards.svg"/>
+            <p>Расчет по карте</p>
+          </div>
+          <div class="item"><img src="images/svg/doc.svg"/>
+            <p>Простая схема документооборота</p>
+          </div>
+          <div class="item"><img src="images/svg/service.svg"/>
+            <p>Расширенный сервис</p>
+          </div>
+        </div>
+      </div>
+      <div class="benefits_video">
+        <div class="poster"></div>
+        <div class="benefits_video_title">Как работает наша сеть современных автомоек</div>
+        <video class="none" preload>
+          <source src="video/video.mp4" type="video/mp4">
+          <source src="video/video.webm" type="video/webm">
+        </video><img class="benefits_video_play" src="images/svg/play.svg">
+      </div>
+    </div>
+    <div class="connect">
+      <div class="left">
+        <div class="connect_title">Как подключить услугу</div>
+        <div class="connect_list">
+          <ol>
+            <div class="ol_title">Если у Вас есть топливная карта «Лукойл»</div>
+            <li class="o_item">
+              <div class="main">Откройте личный кабинет на сайте  <span> <a href="lukoil-card.ru">lukoil-card.ru</a></span></div>
+              <div class="article">Подтвердите согласие на оплату сопутствующих услуг топливной картой</div>
+            </li>
+            <li class="o_item">
+              <div class="main">Теперь Вам доступны услуги на любой из автомоек по топливной карте. Пользуйтесь на здоровье!</div>
+              <div class="article">Список автомоек вы можете посмотреть тут  <span><a href="lukoil-card.ru/news/12345/">lukoil-card.ru/news/12345/</a></span></div>
+            </li>
+          </ol>
+          <ol>
+            <div class="ol_title">Если у Вас еще нет топливной карты Лукойл», то вы можете заключить договор онлайн</div>
+            <li class="o_item">
+              <div class="main">Вам необходимо заполнить заявку на сайте и получить топливные карты в одном из офисов продаж «Лукойл»</div>
+              <div class="article">Список офисов доступен здесь: <span><a href="lukoil-card.ru/partners/">lukoil-card.ru/partners/</a></span></div>
+            </li>
+            <li class="o_item">
+              <div class="main">После этого Вы сможете активировать услугу автомойки в личном кабинете на сайте <span> <a href="lukoil-card.ru">lukoil-card.ru</a></span></div>
+            </li>
+          </ol>
+        </div>
+        <div class="btn ">заключить договор онлайн</div>
+      </div>
+      <div class="right">
+        <div class="btn ">заключить договор онлайн</div>
+      </div>
+    </div>
+    <div class="map">
+      <div class="map_header_wrapper">
+        <div class="map_title">Карта автомоек, доступных по топливной карте «Лукойл»</div>
+        <div class="map_select_box">
+          <select class="select select_car">
+            <option value="cargo">Грузовые</option>
+            <option value="car">Легковые</option>
+          </select>
+          <select class="select select_city">
+            <option value="Москва">Москва</option>
+            <option value="Санкт-Петербург">Санкт-Петербург</option>
+            <option value="МО">МО</option>
+          </select>
+        </div>
+      </div>
+      <div id="map_box"></div>
+    </div>
+    <div class="services">
+      <div class="services_content">
+        <div class="services_title">Все необходимые услуги и сервисы с вами в пути</div>
+        <div class="services_article">Получите возможность оплачивать услуги по топливной карте «Лукойл». Вся отчетность по расходам будет отображаться в личном кабинете.</div>
+        <div class="services_items">
+          <div class="item"><img src="images/svg/kruassan.svg"/>
+            <p>Сопутствующие товары</p>
+          </div>
+          <div class="item"><img src="images/svg/coursor.svg"/>
+            <p>Электронный документооборот</p>
+          </div>
+          <div class="item"><img src="images/svg/shina.svg"/>
+            <p>Шиномонтаж</p>
+          </div>
+          <div class="item"><img src="images/svg/car_washing.svg"/>
+            <p>Автомойки</p>
+          </div>
+          <div class="item"><img src="images/svg/otchet.svg"/>
+            <p>Электронная отчетность</p>
+          </div>
+        </div>
+      </div>
+      <div class="services_images"><img class="services_bg_01" src="images/services_bg_01.jpg"><img class="services_bg_02" src="images/services_bg_02.jpg"></div>
+    </div>
+    <div class="app">
+      <div class="left">
+        <div class="app_title">помощь водителю в пути</div>
+        <div class="app_items">
+          <div class="item"><img src="images/svg/ruble.svg"/>
+            <p>Проверка баланса на карте</p>
+          </div>
+          <div class="item"><img src="images/svg/cash.svg"/>
+            <p>Информация о лимитах и транзакциях</p>
+          </div>
+          <div class="item"><img src="images/svg/fuel.svg"/>
+            <p>Поиск ближайших сервисов и АЗС</p>
+          </div>
+          <div class="item"><img src="images/svg/info.svg"/>
+            <p>Другая полезная информация</p>
+          </div>
+        </div>
+        <div class="btn ">Оформить договор онлайн</div>
+      </div>
+      <div class="right">
+        <div class="download">
+          <div class="right_phones"><img class="app_phones" src="images/phones.png"></div>
+          <div class="right_content">
+            <div class="right_title">Скачайте мобильное приложение</div><span><img class="app_01" src="images/apple.png"><img class="app_02" src="images/google.png"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="submit">
+      <div class="left">
+        <div class="submit_title">Оформить топливную карту онлайн — быстро и удобно</div>
+        <div class="submit_list">
+          <ol>
+            <li class="o_item">
+              <div class="main">Заполните все необходимые поля в онлайн-заявке на заключение типового договора Оферты.</div>
+              <div class="article">Процедура займет не более 15 минут. Для оформления заявки Вам потребуются электронные копии учредительных документов.</div>
+            </li>
+            <li class="o_item">
+              <div class="main">Мы вышлем Вам письмо-подтверждение на электронную почту.</div>
+              <div class="article">В течение 3 рабочих дней заявка будет рассмотрена и подтверждена.</div>
+            </li>
+            <li class="o_item">
+              <div class="main">Мы подготовим и направим Вам на электронную почту счет на оплату топлива.</div>
+            </li>
+            <li class="o_item">
+              <div class="main">Внесите средства на счет для активации договора.</div>
+              <div class="article">Договор вступит в силу с момента зачисления Вами средств на счет.</div>
+            </li>
+            <li class="o_item">
+              <div class="main">Получите доступ к сети моек, пользуйтесь онлайн топливной картой и экономьте</div>
+              <div class="article">Используйте Вашу карту при оплате топлива и услуг и экономьте на расходах.</div>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="right"><img class="services_bg_01" src="images/submit_bg.jpg"></div>
+    </div>
+    <div class="footer">
+      <div class="footer_title">© 2018 ООО «Лукойл»</div>
+      <div class="footer_phone">
+        <div class="phone_text">Звонок по России бесплатный</div>
+        <div class="number">8-000-000-00-00</div>
+      </div>
+    </div>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

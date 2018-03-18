@@ -12,7 +12,6 @@ Thumbs.db
 *.css.map
 node_modules/
 dist/
-temp/
 
 CNAME
 
