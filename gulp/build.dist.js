@@ -28,6 +28,7 @@ gulp.task('optimizeImages', ['clean:dist'], () => (
     '!./src/images/**/*',
     './src/images/icons',
     '!./src/images/icons/**/*',
+    // =========================================
   ])
     .pipe(imagemin({
       progressive: true,

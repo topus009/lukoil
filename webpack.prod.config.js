@@ -4,7 +4,6 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     main: './src/scripts/main.js',
-    // vendor: './src/scripts/vendor.js',
   },
   output: {
     path: path.join(__dirname, './src/temp/js'),

@@ -1,16 +1,15 @@
 .slider
   width: 100vw
-  background-image: url('../../images/slide_01_bg.png')
-  background-position: 0 -70px
-  background-repeat: no-repeat
   background-color: color(bg_, blue_)
-  height: 633px
+  // height: 633px
   position: relative
+  // z-index: 0
   .slider_head
     margin: 0 31px
     display: table
     margin-bottom: 36px
     padding-top: 70px
+    z-index: 1
     .slider_head_image_wrapper
       width: 125px
       height: 125px
@@ -19,6 +18,7 @@
       position: relative
       display: table
       margin-right: 26px
+      z-index: 1
       img
         position: absolute
         left: 10px
@@ -32,8 +32,11 @@
       text-transform: uppercase
       display: table-cell
       color: color(text_, white_)
+      z-index: 1
+      position: relative
   .slider_content
     margin: 0 31px
+    z-index: 1
     .slider_content_text
     font-family: 'D-R'
     font-size: 38px
@@ -43,11 +46,21 @@
     .btn
       margin: 20px auto 0 auto
   .slider_content_image
-    width: 100%
     position: absolute
+    width: 60vw
+    right: 10px
+    bottom: 10px
+    z-index: 1
+  .slider_bg_image
+    position: absolute
+    top: -70px
+    height: calc(100% + 71px)
+    width: 100vw
+    z-index: 0
 
 @media screen and (max-width: 480px)
   .slider
+    height: auto
     .slider_head
       margin: 0 15px
       display: flex
@@ -61,30 +74,50 @@
         line-height: 36px
     .slider_content
       margin: 0 15px
+      padding-bottom: 35px
       .slider_content_text
         font-size: 24px
         font-weight: 500
         line-height: 26px
         margin-top: 20px
+    .slider_content_image
+      position: relative
+      margin: 0 auto
+      display: flex
+      width: 80vw
 
 @media screen and (min-width: 481px) and (max-width: 640px)
   .slider
+    height: auto
     .slider_head
       .slider_head_title
           font-size: 36px
           line-height: 40px
     .slider_content
+      padding-bottom: 35px
       .slider_content_text
         font-size: 32px
         font-weight: 500
         line-height: 32px
+    .slider_content_image
+      position: relative
+      margin: 0 auto
+      display: flex
+      width: 80vw
 
 @media screen and (min-width: 641px)
   .slider
+    height: auto
     .slider_head
     .slider_content
+      padding-bottom: 35px
       .btn
         padding: 27px 64px
+    .slider_content_image
+      position: relative
+      margin: 0 auto
+      display: flex
+      width: 80vw
 
 @media screen and (min-width: 980px)
   .slider
@@ -100,22 +133,17 @@
       .slider_content_text
         font-size: 30px
         line-height: 30px
-      .slider_content_image
-        width: 629px
-        position: absolute
-        top: -200px
-        bottom: 0
-        right: 0
-        margin: auto
       .btn
         font-size: 17px
         line-height: 17px
         padding: 23px 20px
+    .slider_content_image
+      width: 65vw
 
 @media screen and (min-width: 1366px)
   .slider
     padding: 0 0 215px 0
-    // min-height: 654px
+    min-height: 633px
     .slider_head
       margin: 0 170px
       .slider_head_title
@@ -133,6 +161,7 @@
         margin-left: 0
         margin-right: 0
     .slider_content_image
-      width: 1100px
+      position: absolute
+      width: 60vw
       right: 10px
       bottom: 10px
