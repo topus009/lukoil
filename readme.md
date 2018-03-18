@@ -20,7 +20,8 @@ npm run deploy - публикация на GitHub Pages
 ```
 ### О задаче
 
-[![N|Solid](https://topus009.github.io/lukoil/screenshot.png)](https://topus009.github.io/lukoil/screenshot.png)
+Лайф версия доступна по [ссылке](https://topus009.github.io/lukoil/src/temp/index.html)
 
 ***
-Лайф версия доступна по [ссылке](https://topus009.github.io/lukoil/src/temp/index.html)
+
+[![N|Solid](screenshot.png)](https://topus009.github.io/lukoil/screenshot.png)
