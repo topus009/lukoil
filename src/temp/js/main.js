@@ -1,1 +1,293 @@
-!function(e){function t(o){if(r[o])return r[o].exports;var n=r[o]={i:o,l:!1,exports:{}};return e[o].call(n.exports,n,n.exports,t),n.l=!0,n.exports}var r={};t.m=e,t.c=r,t.i=function(e){return e},t.d=function(e,r,o){t.o(e,r)||Object.defineProperty(e,r,{configurable:!1,enumerable:!0,get:o})},t.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(r,"a",r),r},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=2)}([function(e,t,r){"use strict";var o=r(1),n=function(){var e=["typeSelector","searchControl","fullscreenControl","geolocationControl","trafficControl","rulerControl"],t=document.createElement("script");t.src="https://api-maps.yandex.ru/2.1/?lang=ru_Ru&coordorder=longlat&mode=debug",document.body.appendChild(t);var n=void 0,a=void 0;r.i(o.a)("https://raw.githubusercontent.com/topus009/ets/master/data.json").then(function(e){a=e}),t.onload=function(){ymaps.ready(function(){n=new ymaps.Map("map_box",{center:["37.64","55.76"],zoom:11});var t=document.getElementsByTagName("ymaps"),r=[],o=document.querySelector(".select_car"),s=document.querySelector(".select_city");n.container.fitToViewport("always"),n.behaviors.disable("scrollZoom");for(var c=0;c<e.length;c++)n.controls.remove(e[c]);for(var i=0;i<t.length;i++)t[i].className.indexOf("copyright")>-1&&t[i].remove();for(var u=0;u<a.length;u++)r.push({type:"Feature",geometry:{type:"Point",coordinates:[+a[u].lat,+a[u].long]},options:{iconImageHref:"../images/map_icon.png",iconImageSize:[30,43],iconLayout:"default#image"},properties:{city:a[u].city,car:a[u].car,cargo:a[u].cargo}});var l={type:"FeatureCollection",features:r},d=new ymaps.ObjectManager({clusterize:!0,gridSize:32,clusterDisableClickZoom:!0});d.add(l),d.clusters.options.set("preset","islands#redClusterIcons"),n.geoObjects.add(d);var p=function(e){var t=void 0;"car"===e&&(t=l.features.filter(function(e){return!!e.properties.car}),l={type:"FeatureCollection",features:t},console.warn(l.features),d.removeAll(),n.geoObjects.removeAll(),d.add(l),d.clusters.options.set("preset","islands#redClusterIcons"),n.geoObjects.add(d)),"cargo"===e&&(t=l.features.filter(function(e){return!!e.properties.cargo}),l={type:"FeatureCollection",features:t},d.removeAll(),n.geoObjects.removeAll(),d.add(l),d.clusters.options.set("preset","islands#redClusterIcons"),n.geoObjects.add(d))};o.addEventListener("change",function(e){p(e.target.value)}),s.addEventListener("change",function(e){d.setFilter(function(t){return t.properties.city===e.target.value})})})}};t.a=n},function(e,t,r){"use strict";function o(e){return new Promise(function(t,r){var o=new XMLHttpRequest;o.open("GET",e,!1),o.onload=function(){if(200===this.status)t(JSON.parse(this.response));else{var e=new Error(this.statusText);e.code=this.status,r(e)}},o.onerror=function(){r(new Error("Network Error"))},o.send()})}function n(e){return o(e)}t.a=n},function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o=r(0);document.addEventListener("DOMContentLoaded",function(){!function(){for(var e=document.querySelectorAll(".header .link"),t=0;t<e.length;t++)e[t].addEventListener("click",function(e){var t=e.target.getAttribute("data-title");document.querySelectorAll("body > ."+t)[0].scrollIntoView({block:"start",behavior:"smooth"})})}(),function(){r.i(o.a)()}(),function(){var e=document.querySelectorAll(".benefits_video_play")[0],t=document.querySelectorAll(".benefits_video_title")[0],r=document.querySelectorAll(".poster")[0],o=document.getElementsByTagName("video")[0];e.addEventListener("click",function(){e.classList.add("none"),t.classList.add("none"),o.setAttribute("controls","true"),o.setAttribute("autoplay","true"),o.classList.remove("none"),o.play(),r.style.backgroundImage="none",r.style.zindex="-1"}),o.addEventListener("click",function(e){e.target.paused?o.play():o.pause()})}()})}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__getData__ = __webpack_require__(1);
+// import getData from './data.json';
+
+
+var map_js = function map_js() {
+  var ver = '2.1';
+  var language = 'ru_Ru';
+  var coordorder = 'longlat';
+  var mode = 'debug';
+  var lat = '37.64';
+  var long = '55.76';
+  var behaviour = ['typeSelector', 'searchControl', 'fullscreenControl', 'geolocationControl', 'trafficControl', 'rulerControl'];
+  var script = document.createElement('script');
+  script.src = 'https://api-maps.yandex.ru/' + ver + '/?lang=' + language + '&coordorder=' + coordorder + '&mode=' + mode;
+  var children = document.body.children;
+  children[children.length - 1].appendChild(script);
+  var myMap = void 0; /* eslint no-unused-vars: 1 */
+  // ===================================
+  var data = void 0;
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__getData__["a" /* default */])('https://raw.githubusercontent.com/topus009/ets/master/data.json').then(function (response) {
+    data = response;
+  });
+  // ===================================
+  script.onload = function () {
+    /* global ymaps */
+    // ================================
+    ymaps.ready(function () {
+      myMap = new ymaps.Map('map_box', {
+        center: [lat, long],
+        zoom: 11
+      });
+      var ymap_doc = document.getElementsByTagName('ymaps');
+      var points = [];
+      var select_car = document.querySelector('.select_car');
+      var select_city = document.querySelector('.select_city');
+
+      myMap.container.fitToViewport('always');
+      myMap.behaviors.disable('scrollZoom');
+      // =========== УДАЛЕНИЕ НЕНУЖНЫХ СТИЛЕЙ ========
+      for (var b = 0; b < behaviour.length; b++) {
+        myMap.controls.remove(behaviour[b]);
+      }
+      for (var el = 0; el < ymap_doc.length; el++) {
+        if (ymap_doc[el].className.indexOf('copyright') > -1) {
+          ymap_doc[el].remove();
+        }
+      }
+      // =============================================
+      for (var i = 0; i < data.length; i++) {
+        points.push({
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [+data[i].lat, +data[i].long]
+          },
+          options: {
+            iconImageHref: '../images/map_icon.png',
+            iconImageSize: [30, 43],
+            iconLayout: 'default#image'
+          },
+          properties: {
+            city: data[i].city,
+            car: data[i].car,
+            cargo: data[i].cargo
+          }
+        });
+      }
+
+      var geoPoints = {
+        type: 'FeatureCollection',
+        features: points
+      };
+      // ===============================================
+      var objectManager = new ymaps.ObjectManager({
+        clusterize: true,
+        gridSize: 32,
+        clusterDisableClickZoom: true
+      });
+      objectManager.add(geoPoints);
+      objectManager.clusters.options.set('preset', 'islands#redClusterIcons');
+      myMap.geoObjects.add(objectManager);
+      // ===============================================
+      var checkState = function checkState(e) {
+        var newPoints = void 0;
+        if (e === 'car') {
+          newPoints = geoPoints.features.filter(function (p) {
+            return !!p.properties.car;
+          });
+          geoPoints = {
+            type: 'FeatureCollection',
+            features: newPoints
+          };
+          console.warn(geoPoints.features);
+          objectManager.removeAll();
+          myMap.geoObjects.removeAll();
+          objectManager.add(geoPoints);
+          objectManager.clusters.options.set('preset', 'islands#redClusterIcons');
+          myMap.geoObjects.add(objectManager);
+        }
+        if (e === 'cargo') {
+          newPoints = geoPoints.features.filter(function (p) {
+            return !!p.properties.cargo;
+          });
+          geoPoints = {
+            type: 'FeatureCollection',
+            features: newPoints
+          };
+          objectManager.removeAll();
+          myMap.geoObjects.removeAll();
+          objectManager.add(geoPoints);
+          objectManager.clusters.options.set('preset', 'islands#redClusterIcons');
+          myMap.geoObjects.add(objectManager);
+        }
+      };
+      // ===============================================
+      // ============= ФИЛЬТР ==========================
+      select_car.addEventListener('change', function (e) {
+        checkState(e.target.value);
+      });
+      select_city.addEventListener('change', function (e) {
+        objectManager.setFilter(function (object) {
+          return object.properties.city === e.target.value;
+        });
+      });
+    });
+  };
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (map_js);
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = getData;
+function request(url) {
+  return new Promise(function (resolve, reject) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('GET', url, false);
+    xhr.onload = function () {
+      if (this.status === 200) {
+        resolve(JSON.parse(this.response));
+      } else {
+        var error = new Error(this.statusText);
+        error.code = this.status;
+        reject(error);
+      }
+    };
+
+    xhr.onerror = function () {
+      reject(new Error('Network Error'));
+    };
+
+    xhr.send();
+  });
+}
+
+function getData(url) {
+  return request(url);
+}
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ymaps__ = __webpack_require__(0);
+/* eslint-disabl */
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // ========================== GLOBAL SCROLL
+  (function () {
+    var links = document.querySelectorAll('.header .link');
+
+    for (var link = 0; link < links.length; link++) {
+      links[link].addEventListener('click', function (h) {
+        var target = h.target.getAttribute('data-title');
+        document.querySelectorAll('body > .' + target)[0].scrollIntoView({ block: 'start', behavior: 'smooth' });
+      });
+    }
+  })();
+  // ========================== MAP
+  (function () {
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__ymaps__["a" /* default */])();
+  })();
+  // ========================= VIDEO PLAY
+  (function () {
+    var play_btn = document.querySelectorAll('.benefits_video_play')[0];
+    var video_title = document.querySelectorAll('.benefits_video_title')[0];
+    var poster = document.querySelectorAll('.poster')[0];
+    var video = document.getElementsByTagName('video')[0];
+
+    play_btn.addEventListener('click', function () {
+      play_btn.classList.add('none');
+      video_title.classList.add('none');
+      video.setAttribute('controls', 'true');
+      video.setAttribute('autoplay', 'true');
+      video.classList.remove('none');
+      video.play();
+      poster.style.backgroundImage = 'none';
+      poster.style.zindex = '-1';
+    });
+    // ============ ПАУЗА
+    video.addEventListener('click', function (e) {
+      if (!e.target.paused) {
+        video.pause();
+      } else {
+        video.play();
+      }
+    });
+    // ===============
+  })();
+});
+
+/***/ })
+/******/ ]);

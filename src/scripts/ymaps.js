@@ -11,7 +11,8 @@ const map_js = () => {
   const behaviour = ['typeSelector', 'searchControl', 'fullscreenControl', 'geolocationControl', 'trafficControl', 'rulerControl'];
   const script = document.createElement('script');
   script.src = `https://api-maps.yandex.ru/${ver}/?lang=${language}&coordorder=${coordorder}&mode=${mode}`;
-  document.body.appendChild(script);
+  const children = document.body.children;
+  children[children.length - 1].appendChild(script);
   let myMap; /* eslint no-unused-vars: 1 */
   // ===================================
   let data;
